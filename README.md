@@ -1,55 +1,44 @@
-# FERN Stack template - An entry point
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/LeviEyal/FERN-Stack-Template)
+# Weather Application
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-<!-- in progess lable -->
-[![in progress](https://img.shields.io/badge/in%20progress-red.svg)]()
+![image](https://user-images.githubusercontent.com/73398186/176395416-aec1d4a4-09e4-4ceb-b515-0f4514c3feed.png)
 
-## FERN stands for:
+## Description
 
-* F - Fireabase Database 
-* E - Express.JS server
-* R - React frontend app
-* N - Node.JS backend app
+The weather application has two sub systems.  
+* **Client side** - written using React.js  
+deployed here: https://imdb-react-app.herokuapp.com/ 
+* **Server side** - written using Node.js & Express  
+deployed here: https://imdb-server-node.herokuapp.com/
+(to get a response from the server use it like this: https://weatherapplication10.herokuapp.com/getWeatherCity?city=${query} )
 
-# HOW TO USE
-1. Clone the project
-```python
-git clone https://github.com/LeviEyal/FERN-Stack-Template.git
+## Getting Started
+
+### Dependencies
+
+* Node.js v14.17.5
+* Windows 10
+
+### Installing
+
+* Clone this repository locally
+* In each folder (front and server) run:
 ```
-
-2. Open two terminals - one for the server and one for the client
-3. Install dependencies on the server terminal
-```python
-cd FERN-Stack-Template/backend
 npm install
 ```
-4. Install dependencies on the client terminal
-```python
-cd FERN-Stack-Template/frontend
-npm install
-```
-4. Run the server on the server terminal
-```python
-npm start
-```
-5. Run the frontend app on the client terminal
-```python
-npm start
-```
-6. Open the browser and go to http://localhost:3000
 
-# Dependencies
-* [Node.js](https://nodejs.org/en/)
-* [Express](https://expressjs.com/)
-* [React](https://reactjs.org/)
-* [Firebase Admin SDK](https://firebase.google.com/docs/admin/setup#initialize_the_sdk)
-* [Firebase Database](https://firebase.google.com/docs/database/web/read-and-write)
+### Executing program
 
+**Each subsystem needs to run individually**
+* open cmd in front folder and run 
+```npm start```
+* open *another* cmd in server folder and run
+```node app.js```
 
-# Contributing
-* Fork the project
-* Create a new branch
-* Commit your changes
-* Push your branch to GitHub
-* Open a pull request
+## IMPORTANT
 
+The current React.js app is requesting data from the **deployed server**.
+To make the app send requests to the local server (folder server):  
+1. Access front/src/movies-context.js
+2. In line 5 replace the link with (`http://localhost:3001/getFeatured`)
