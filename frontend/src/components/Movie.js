@@ -16,7 +16,12 @@ function Movie(props) {
             <div className="movie">
                 <img src={props.poster_path ? IMG_API + props.poster_path : `${noImg}`} alt={props.title}
                     onClick={() => {
-                        setData(props)
+                        setData({
+                            title: props.title,
+                            lang: props.original_language,
+                            date: props.release_date,
+                            count: props.vote_count
+                        })
                         setModal(!modal)
                     }} />
 

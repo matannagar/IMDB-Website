@@ -9,10 +9,9 @@ function Modal({ toggleModal, data }) {
             <div className="modal-content">
                 <span className="close-modal" onClick={toggleModal}>&times;</span>
                 <h2>{data.title}</h2>
-                <p>Language: {data.original_language}</p>
-                <p>Release data: {data.release_date}</p>
-                <p>Total votes: {data.vote_count}</p>
-
+                <p>Language: {data.lang}</p>
+                <p>Release data: {data.date}</p>
+                <p>Total votes: {data.count}</p>
             </div>
         </div>
     )
