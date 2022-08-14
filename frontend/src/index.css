@@ -43,14 +43,14 @@ header{
     box-shadow: 3px 3px 5px (0,0,0,0.1);
     width: 300px;
     overflow: hidden;
-
+    cursor: pointer;
     position:relative;
 }
 
 .movie img{
     object-fit: cover;
     height: 400px;
-    max-width: 100%;
+    min-width: 100%;
 }
 
 .movie-info{
