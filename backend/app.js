@@ -2,15 +2,11 @@ const express = require('express')
 const cors = require("cors");
 
 const imdbController = require('./controllers/imdbController')
-// For getting the environment variables from .env file
-// dotenv.config();
-
 const app = express();
 
 /* Here you put all the middlewares. for example:*/
 app.use(cors());
 app.use(express.json());
-
 
 app.get('/getFEATURED/', imdbController.getFeatured);
 app.get('/getSearch', imdbController.getSearch)
