@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from "react";
 import { MoviesContext } from "../movies-context";
 
-const SEARCH_API = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query="
+const SEARCH_API = "https://imdb-server-node.herokuapp.com/getsearch/?movie="
 
 function Search() {
     const [movies, setMovies, searchM, setSearchM, getMovies] = useContext(MoviesContext);
