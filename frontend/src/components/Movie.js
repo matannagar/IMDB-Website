@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Modal from './Modal/Modal'
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-function Movie({ title, poster_path, overview, vote_average }) {
+function Movie(props) {
     const [modal, setModal] = useState(false);
-    const [data, setData] = useState('nothing')
+    const [data, setData] = useState('')
 
 
     const toggleModal = () => {
@@ -14,24 +14,24 @@ function Movie({ title, poster_path, overview, vote_average }) {
     return (
         <>
             <div className="movie">
-                <img src={poster_path ? IMG_API + poster_path : `${noImg}`} alt={title}
+                <img src={props.poster_path ? IMG_API + props.poster_path : `${noImg}`} alt={props.title}
                     onClick={() => {
-                        // setData(data)
+                        setData(props)
                         setModal(!modal)
                     }} />
 
                 <div className="movie-info">
-                    <h3>{title}</h3>
-                    <span>{vote_average}</span>
+                    <h3>{props.title}</h3>
+                    <span>{props.vote_average}</span>
                 </div>
 
                 <div className="movie-over">
                     <h2>Overview:</h2>
-                    <p>{overview}</p>
+                    <p>{props.overview}</p>
                 </div>
             </div>
             {modal && (
-                <Modal toggleModal={toggleModal} />
+                <Modal toggleModal={toggleModal} data={data} />
             )
             }
         </>

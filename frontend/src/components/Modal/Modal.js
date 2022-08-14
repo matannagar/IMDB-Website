@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Modal.css'
 
-function Modal({ toggleModal }) {
+function Modal({ toggleModal, data }) {
 
     return (
         <div className="modal" onClick={toggleModal}>
             <div className="overlay" onClick={toggleModal}></div>
             <div className="modal-content">
-                <span class="close-modal" onClick={toggleModal}>&times;</span>
-                <p>Some text in the Modal..</p>
+                <span className="close-modal" onClick={toggleModal}>&times;</span>
+                <h2>{data.title}</h2>
+                <p>Language: {data.original_language}</p>
+                <p>Release data: {data.release_date}</p>
+                <p>Total votes: {data.vote_count}</p>
+
             </div>
-            {/* <button className='close-modal'
-                onClick={toggleModal}>CLOSE</button> */}
         </div>
     )
 }
