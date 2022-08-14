@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Search() {
+function Search({ handleOnSubmit, searchM, handleOnChange }) {
     return (
-        <div>Search</div>
+        <header>
+            <form onSubmit={handleOnSubmit}>
+                <input className="search"
+                    type="search"
+                    value={searchM}
+                    onChange={handleOnChange}
+                    placeholder="search..." />
+
+            </form>
+        </header>
     )
 }
 
