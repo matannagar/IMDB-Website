@@ -8,3 +8,4 @@ in the format:
 
 export { default as Movie } from "./Movie";
 export { default as Search } from "./Search";
+export { default as MoviesList } from "./MoviesList";
