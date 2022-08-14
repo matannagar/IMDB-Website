@@ -48,6 +48,8 @@ header{
 }
 
 .movie img{
+    object-fit: cover;
+    height: 400px;
     max-width: 100%;
 }
 
