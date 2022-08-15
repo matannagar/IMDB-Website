@@ -16,16 +16,28 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Modal Content */
 .modal-content {
+  
 text-align: center;
 color:black;
-font-size: 25px;
+font-size: 100%;
+
+overflow: auto;
 
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 30%;
   height: 50%;
+
+  border: solid;
+}
+
+.information{
+  margin-top: 10%;
+  max-width: 100%;
+  max-height: 100%;
+  
 }
 
 /* The Close Button */
