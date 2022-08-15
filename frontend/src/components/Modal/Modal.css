@@ -12,18 +12,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
 }
 
 /* Modal Content */
 .modal-content {
   
 text-align: center;
-color:black;
+color:white;
 font-size: 100%;
 
 overflow: auto;
 
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
   margin: auto;
   padding: 10px;
   border: 1px solid #888;
@@ -31,6 +32,9 @@ overflow: auto;
   height: 50%;
 
   border: solid;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.185), #373b69);
+
 }
 
 .information{
@@ -54,3 +58,5 @@ overflow: auto;
   text-decoration: none;
   cursor: pointer;
 }
+
+
