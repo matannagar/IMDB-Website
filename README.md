@@ -2,7 +2,7 @@
 ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![image](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-![image](https://user-images.githubusercontent.com/73398186/176395416-aec1d4a4-09e4-4ceb-b515-0f4514c3feed.png)
+![image](website.gif)
 
 ## Description
 
@@ -11,7 +11,11 @@ The weather application has two sub systems.
 deployed here: https://imdb-react-app.herokuapp.com/ 
 * **Server side** - written using Node.js & Express  
 deployed here: https://imdb-server-node.herokuapp.com/
-(to get a response from the server use it like this: https://weatherapplication10.herokuapp.com/getWeatherCity?city=${query} )
+
+### How to use imdb-API server
+* Get featured movies : https://imdb-server-node.herokuapp.com/getFeatured
+* Get search result : https://imdb-server-node.herokuapp.com/getsearch/?movie={THE NAME OF THE MOVIE}
+
 
 ## Getting Started
 
